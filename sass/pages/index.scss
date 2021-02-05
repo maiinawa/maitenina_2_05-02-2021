@@ -1,0 +1,80 @@
+#headline-wrapper,
+#search_preferences-wrapper {
+  @include padding-mobile;
+}
+
+.trending_rooms {
+  background-color: $grey;
+  padding: 38px 13px 20px 13px;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+
+    i {
+      font-size: 1.5em;
+      padding: 0px 0 0 0;
+    }
+  }
+  article {
+    @include thumbails;
+    @include box-shadow;
+    img {
+      width: 40%;
+      height: 133px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  }
+  .trending_rooms-mosaic_text {
+    padding: 10px 0px 0 20px;
+
+    .empty-line {
+      height: 32px;
+    }
+  }
+}
+.city_rooms {
+  padding: 38px 10px 20px 10px;
+  h2 {
+    padding-bottom: 20px;
+  }
+  &-mosaic-wrapper {
+    flex-direction: column;
+    article {
+      @include box-shadow;
+      background-color: white;
+      img {
+        @include large-thumbnail-img;
+      }
+      @include thumbails;
+    }
+  }
+  &-mosaic_text {
+    padding: 5px 0px 8px 15px;
+  }
+  .more {
+    padding: 20px 0 0 20px;
+  }
+}
+
+.activities {
+  padding: 38px 20px 20px 20px;
+  h2 {
+    padding-bottom: 20px;
+  }
+  article {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    @include box-shadow;
+    background-color: white;
+    img {
+      @include large-thumbnail-img;
+      height: 130px;
+    }
+    h3 {
+      padding: 15px 15px;
+    }
+  }
+}

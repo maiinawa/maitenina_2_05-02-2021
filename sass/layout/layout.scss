@@ -1,0 +1,65 @@
+nav {
+  display: grid;
+  position: relative;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "logo sub"
+    "nav nav";
+
+  #logo {
+    grid-area: logo;
+    width: 60%;
+    padding: 15px 0px 0px 20px;
+  }
+  #sub {
+    grid-area: sub;
+    height: 50%;
+    padding: 40px 20px 0px 0px;
+
+    color: $blue;
+    font-weight: 600;
+    text-align: right;
+  }
+  ul {
+    grid-area: nav;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    & li {
+      width: 50%;
+      height: 50%;
+
+      text-align: center;
+    }
+    a {
+      display: block;
+
+      padding-top: 20px;
+      height: 40px;
+      border-bottom: 3px solid $grey;
+      &:hover {
+        color: $blue;
+        font-weight: 600;
+        border-bottom: 3px solid $blue;
+        transition: 0.1s ease-in-out;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 38px 25px 20px 25px;
+
+  background-color: $grey;
+  h3 {
+    padding-bottom: 20px;
+    font-size: 1.2em;
+  }
+  ul {
+    margin: -5px 0 35px 0;
+    padding: 0;
+    line-height: 2em;
+  }
+}

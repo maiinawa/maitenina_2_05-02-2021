@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.icon_container {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+
+.blue {
+  color: #0065fc;
+}
+
+.grey {
+  color: #f2f2f2;
+}
+
+.fa-star {
+  font-size: 0.7em;
+}
+
+.detail {
+  font-size: 0.85em;
+  line-height: 2em;
+}
+
+#search-bar {
+  display: flex;
+  padding: 0 0 30px 0;
+}
+#search-bar .search-bar-icon {
+  background-color: #f2f2f2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+#search-bar .search-bar-icon i {
+  margin: 1em;
+  font-size: 1.1em;
+}
+#search-bar input {
+  border: 1px solid #f2f2f2;
+  outline: none;
+  width: 350px;
+}
+#search-bar input::placeholder {
+  padding: 0px 0px 0px 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: black;
+}
+#search-bar button {
+  margin-left: -15px;
+  background-color: #0065fc;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+#search-bar button i {
+  font-size: 1.1em;
+  color: white;
+  margin: 0.8em;
+}
+#search-bar .button-desktop-version {
+  display: none;
+}
+
+.filters h3 {
+  padding-bottom: 30px;
+}
+.filters_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filters_button {
+  display: flex;
+  justify-content: start;
+  margin: 0 8px 10px 0;
+  height: 45px;
+  border: 2.5px solid lightgrey;
+  border-radius: 25px;
+}
+.filters_button span {
+  margin: 12px 18px 0 10px;
+  font-weight: 700;
+}
+.filters_icon {
+  margin: -2.5px 0 0 -5px;
+  background-color: #deebff;
+  border-radius: 50%;
+}
+.filters_icon i {
+  color: #0065fc;
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+.info {
+  padding: 25px 0 20px 0;
+  display: flex;
+}
+.info-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+.info-icon i {
+  color: #0065fc;
+  font-size: 0.7em;
+}
+.info p {
+  width: 100%;
+  margin: 0 0 0 10px;
+}
+
+nav {
+  display: grid;
+  position: relative;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "logo sub" "nav nav";
+}
+nav #logo {
+  grid-area: logo;
+  width: 60%;
+  padding: 15px 0px 0px 20px;
+}
+nav #sub {
+  grid-area: sub;
+  height: 50%;
+  padding: 40px 20px 0px 0px;
+  color: #0065fc;
+  font-weight: 600;
+  text-align: right;
+}
+nav ul {
+  grid-area: nav;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+nav ul a {
+  display: block;
+  padding-top: 20px;
+  height: 40px;
+  border-bottom: 3px solid #f2f2f2;
+}
+nav ul a:hover {
+  color: #0065fc;
+  font-weight: 600;
+  border-bottom: 3px solid #0065fc;
+  transition: 0.1s ease-in-out;
+}
+
+footer {
+  padding: 38px 25px 20px 25px;
+  background-color: #f2f2f2;
+}
+footer h3 {
+  padding-bottom: 20px;
+  font-size: 1.2em;
+}
+footer ul {
+  margin: -5px 0 35px 0;
+  padding: 0;
+  line-height: 2em;
+}
+
+#headline-wrapper,
+#search_preferences-wrapper {
+  padding: 20px 13px;
+}
+
+.trending_rooms {
+  background-color: #f2f2f2;
+  padding: 38px 13px 20px 13px;
+}
+.trending_rooms-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+.trending_rooms-title i {
+  font-size: 1.5em;
+  padding: 0px 0 0 0;
+}
+.trending_rooms article {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
+}
+.trending_rooms article img {
+  width: 40%;
+  height: 133px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.trending_rooms .trending_rooms-mosaic_text {
+  padding: 10px 0px 0 20px;
+}
+.trending_rooms .trending_rooms-mosaic_text .empty-line {
+  height: 32px;
+}
+
+.city_rooms {
+  padding: 38px 10px 20px 10px;
+}
+.city_rooms h2 {
+  padding-bottom: 20px;
+}
+.city_rooms-mosaic-wrapper {
+  flex-direction: column;
+}
+.city_rooms-mosaic-wrapper article {
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
+  background-color: white;
+  display: flex;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+.city_rooms-mosaic-wrapper article img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 115px;
+}
+.city_rooms-mosaic_text {
+  padding: 5px 0px 8px 15px;
+}
+.city_rooms .more {
+  padding: 20px 0 0 20px;
+}
+
+.activities {
+  padding: 38px 20px 20px 20px;
+}
+.activities h2 {
+  padding-bottom: 20px;
+}
+.activities article {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
+  background-color: white;
+}
+.activities article img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 115px;
+  height: 130px;
+}
+.activities article h3 {
+  padding: 15px 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
