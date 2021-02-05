@@ -20,6 +20,10 @@
   article {
     @include thumbails;
     @include box-shadow;
+    transition: 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.01);
+    }
     img {
       width: 40%;
       height: 133px;
@@ -45,6 +49,11 @@
     article {
       @include box-shadow;
       background-color: white;
+      transition: 0.1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.01);
+      }
       img {
         @include large-thumbnail-img;
       }
@@ -59,22 +68,178 @@
   }
 }
 
-.activities {
-  padding: 38px 20px 20px 20px;
+#activities {
+  padding: 38px 10px 20px 10px;
   h2 {
     padding-bottom: 20px;
   }
   article {
     border-radius: 20px;
     margin-bottom: 20px;
+    transition: 0.1s ease-in-out;
     @include box-shadow;
     background-color: white;
+    &:hover {
+      transform: scale(1.01);
+    }
+
     img {
       @include large-thumbnail-img;
       height: 130px;
     }
     h3 {
       padding: 15px 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .city_rooms-mosaic-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article {
+      width: 47.5%;
+    }
+  }
+  #activities {
+    &_mosaic {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    article {
+      width: 49%;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .trending_rooms-mosaic {
+    display: flex;
+    gap: 15px;
+    a {
+      width: 34%;
+    }
+    .thumbnails_left-side_rooms {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .empty-line {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1250px) {
+  #hotels_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+    .city_rooms,
+    .trending_rooms {
+      border-radius: 20px;
+      padding: 37px 35px 20px;
+    }
+
+    .city_rooms {
+      background-color: $grey;
+      width: 70%;
+      &-mosaic-wrapper article {
+        width: 30%;
+      }
+    }
+    .trending_rooms {
+      width: 30%;
+      &-mosaic {
+        flex-direction: column;
+        a {
+          width: 100%;
+        }
+      }
+      .thumbnails_left-side_rooms {
+        flex-direction: row;
+        width: 100%;
+        .empty-line {
+          display: block;
+          height: 40px;
+        }
+        img {
+          width: 40%;
+          height: 133px;
+          border-bottom-left-radius: 20px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 0px;
+        }
+      }
+    }
+  }
+  #activities {
+    height: 500px;
+    &_mosaic {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat (4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "bloc1 bloc2 bloc4 bloc5"
+        "bloc1 bloc2 bloc4 bloc5"
+        "bloc1 bloc2 bloc4 bloc6"
+        "bloc1 bloc3 bloc4 bloc6"
+        "bloc1 bloc3 bloc4 bloc6";
+      row-gap: 20px;
+      column-gap: 25px;
+      height: 400px;
+      .bloc1 {
+        grid-area: bloc1;
+        img {
+          height: 345px;
+        }
+      }
+      .bloc2 {
+        grid-area: bloc2;
+        img {
+          height: 180px;
+        }
+      }
+      .bloc3 {
+        grid-area: bloc3;
+        img {
+          height: 95px;
+        }
+      }
+      .bloc4 {
+        grid-area: bloc4;
+        img {
+          height: 345px;
+        }
+      }
+      .bloc5 {
+        grid-area: bloc5;
+        img {
+          height: 95px;
+        }
+      }
+      .bloc6 {
+        grid-area: bloc6;
+        img {
+          height: 180px;
+        }
+      }
+      article {
+        width: 100%;
+        height: 100%;
+        img {
+          @include large-thumbnail-img;
+        }
+      }
     }
   }
 }
