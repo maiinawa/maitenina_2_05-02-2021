@@ -20,3 +20,7 @@
 @mixin box_shadow {
   box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
 }
+
+@mixin padding_desktop {
+  padding: 45px 25px 0 25px;
+}
