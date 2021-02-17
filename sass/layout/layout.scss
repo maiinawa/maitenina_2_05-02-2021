@@ -64,46 +64,48 @@ footer {
   }
 }
 @media screen and(min-width: 1250px) {
-  header {
-    height: 50px;
-    nav {
-      grid-template-columns: 1fr 150px 150px 150px;
-      grid-template-rows: 1fr;
-      grid-template-areas: "logo nav nav sub";
-      #logo {
-        padding: 20px 0 0 0;
-      }
-      #sub {
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        &:hover {
-          background-color: $blue;
-          color: white;
-          border-bottom-left-radius: 20px;
-          border-bottom-right-radius: 20px;
-          a {
-            color: white;
-          }
-        }
+  nav {
+    grid-template-columns: 1fr 150px 150px 150px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo nav nav sub";
+    #logo {
+      padding: 20px 0 0 0;
+    }
+    #sub {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      &:hover {
+        background-color: $blue;
+        color: white;
+        transition: 0.1s ease-in-out;
+
         a {
-          display: block;
-          padding: 27px 0 0 37px;
-          font-size: 1.1em;
+          color: white;
         }
       }
-      ul li a {
-        height: 50px;
-        padding-top: 27px;
+      a {
+        display: block;
+        height: 100%;
+        padding: 27px 0 0 37px;
+        font-size: 1.1em;
+      }
+    }
+    ul li a {
+      height: 50px;
+      padding-top: 27px;
+      border-bottom: none;
+      border-top: 3px solid $grey;
+      &:hover {
         border-bottom: none;
-        border-top: 3px solid $grey;
-        &:hover {
-          border-bottom: none;
-          border-top: 3px solid $blue;
-        }
+        border-top: 3px solid $blue;
       }
     }
   }
+
   footer {
     display: flex;
     div {
