@@ -3,6 +3,7 @@ body {
   font-family: "Raleway", sans-serif;
   margin: 0 auto;
   min-width: 375px;
+  /*max width for desktop version*/
   max-width: 1450px;
 }
 
@@ -27,7 +28,7 @@ h4,
 p {
   margin: 0;
 }
-
+/*global font size website*/
 h1 {
   font-size: 1.4em;
   line-height: 1.2em;
@@ -69,135 +70,10 @@ p {
   line-height: 2em;
 }
 
-@media screen and (min-width: 1250px) {
-  body {
-    padding: 0 10px;
-  }
-}
-#search-bar {
-  display: flex;
-  padding: 0 0 30px 0;
-}
-#search-bar .search-bar-icon {
-  background-color: #f2f2f2;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-#search-bar .search-bar-icon i {
-  margin: 1em;
-  font-size: 1.1em;
-}
-#search-bar input {
-  border: 1px solid #f2f2f2;
-  outline: none;
-  width: 350px;
-}
-#search-bar input::placeholder {
-  padding: 0px 0px 0px 15px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 1.4em;
-  color: black;
-}
-#search-bar button {
-  margin-left: -15px;
-  background-color: #0065fc;
-  border: none;
-  border-radius: 15px;
-  outline: none;
-}
-#search-bar button i {
-  font-size: 1.1em;
-  color: white;
-  margin: 0.8em;
-}
-#search-bar .button-desktop-version {
-  display: none;
-}
+/*--------------------*/
+/*navbar*/
+/*--------------------*/
 
-.filters h3 {
-  padding-bottom: 30px;
-}
-.filters_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-.filters_button {
-  display: flex;
-  justify-content: start;
-  margin: 0 11px 10px 0;
-  height: 45px;
-  border: 2px solid lightgrey;
-  border-radius: 25px;
-  transition: 0.1s ease-in-out;
-}
-.filters_button:hover {
-  transform: scale(1.02);
-  background-color: #deebff;
-  border: #deebff;
-}
-.filters_button span {
-  margin: 12px 18px 0 10px;
-  font-weight: 700;
-}
-.filters_icon {
-  margin: -1px 0 0 -5px;
-  background-color: #deebff;
-  border-radius: 50%;
-}
-.filters_icon i {
-  color: #0065fc;
-  font-size: 1.2em;
-  margin-top: 15px;
-}
-
-.info {
-  padding: 25px 0 20px 0;
-  display: flex;
-}
-.info-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1px solid lightgrey;
-}
-.info-icon i {
-  color: #0065fc;
-  font-size: 0.7em;
-}
-.info p {
-  width: 100%;
-  padding: 2px 0 0 10px;
-}
-
-@media screen and (min-width: 1250px) {
-  .filters {
-    display: flex;
-  }
-  .filters h3 {
-    padding: 15px 40px 0 0;
-  }
-  .filters_button {
-    margin: 0px 40px 0 0;
-  }
-
-  #search-bar .button-desktop-version {
-    display: block;
-    border-radius: 0px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding: 0 20px;
-    margin-left: 0;
-    font-size: 1.1em;
-    color: white;
-  }
-  #search-bar .button-responsive-version {
-    display: none;
-  }
-  #search-bar input {
-    width: 250px;
-  }
-}
 nav {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -243,72 +119,130 @@ nav ul a:hover {
   transition: 0.1s ease-in-out;
 }
 
-footer {
-  padding: 38px 25px 20px 25px;
-  background-color: #f2f2f2;
-}
-footer h3 {
-  padding-bottom: 20px;
-  font-size: 1.2em;
-}
-footer ul {
-  margin: -5px 0 35px 0;
-  padding: 0;
-  line-height: 2em;
-}
+/*--------------------*/
+/*first lines, titles*/
+/*--------------------*/
 
-@media screen and (min-width: 1250px) {
-  nav {
-    grid-template-columns: 1fr 150px 150px 150px;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo nav nav sub";
-  }
-  nav #logo {
-    padding: 20px 0 0 0;
-  }
-  nav #sub {
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  nav #sub:hover {
-    background-color: #0065fc;
-    color: white;
-    transition: 0.1s ease-in-out;
-  }
-  nav #sub:hover a {
-    color: white;
-  }
-  nav #sub a {
-    display: block;
-    height: 100%;
-    padding: 27px 0 0 37px;
-    font-size: 1.1em;
-  }
-  nav ul li a {
-    height: 50px;
-    padding-top: 27px;
-    border-bottom: none;
-    border-top: 3px solid #f2f2f2;
-  }
-  nav ul li a:hover {
-    border-bottom: none;
-    border-top: 3px solid #0065fc;
-  }
-
-  footer {
-    display: flex;
-  }
-  footer div {
-    padding-right: 200px;
-  }
-}
 #headline-wrapper,
 #search_preferences-wrapper {
   padding: 20px 13px;
 }
+
+/*--------------------*/
+/*search bar elements*/
+/*--------------------*/
+
+#search-bar {
+  display: flex;
+  padding: 0 0 30px 0;
+}
+#search-bar .search-bar-icon {
+  background-color: #f2f2f2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+#search-bar .search-bar-icon i {
+  margin: 1em;
+  font-size: 1.1em;
+}
+#search-bar input {
+  border: 1px solid #f2f2f2;
+  outline: none;
+  width: 350px;
+}
+#search-bar input::placeholder {
+  padding: 0px 0px 0px 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: black;
+}
+#search-bar button {
+  margin-left: -15px;
+  background-color: #0065fc;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+/*button mobile version*/
+#search-bar button i {
+  font-size: 1.1em;
+  color: white;
+  margin: 0.8em;
+}
+
+#search-bar .button-desktop-version {
+  display: none;
+}
+/*--------------------*/
+/*filters*/
+/*--------------------*/
+
+.filters h3 {
+  padding-bottom: 30px;
+}
+.filters_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filters_button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 11px 10px 0;
+  height: 45px;
+  border: 2px solid lightgray;
+  border-radius: 25px;
+  transition: 0.1s ease-in-out;
+}
+.filters_button:hover {
+  transform: scale(1.02);
+  background-color: #deebff;
+  border: 2px solid transparent;
+}
+.filters_button span {
+  margin: 0px 15px;
+  font-weight: 700;
+}
+.filters_icon {
+  margin: -1px 0 0 -5px;
+  background-color: #deebff;
+  border-radius: 50%;
+}
+.filters_icon i {
+  color: #0065fc;
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+/*--------------------*/
+/*info text*/
+/*--------------------*/
+
+.info {
+  padding: 25px 0 20px 0;
+  display: flex;
+}
+.info-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+.info-icon i {
+  color: #0065fc;
+  font-size: 0.7em;
+}
+.info p {
+  width: 100%;
+  padding: 2px 0 0 10px;
+}
+
+/*--------------------*/
+/*aside right desktop version trending rooms*/
+/*--------------------*/
 
 .trending_rooms {
   background-color: #f2f2f2;
@@ -323,12 +257,14 @@ footer ul {
   font-size: 1.5em;
   padding: 0px 0 0 0;
 }
+/*little cards trending rooms in Marseille*/
+
 .trending_rooms article {
   display: flex;
   margin-bottom: 10px;
   background-color: white;
   border-radius: 20px;
-  border: 5px solid white;
+  border: 5px solid transparent;
   box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
   transition: 0.1s ease-in-out;
 }
@@ -348,6 +284,10 @@ footer ul {
   height: 32px;
 }
 
+/*--------------------*/
+/*aside left desktop version rooms in Marseille*/
+/*--------------------*/
+
 .city_rooms {
   padding: 38px 10px 20px 10px;
 }
@@ -357,6 +297,8 @@ footer ul {
 .city_rooms-mosaic-wrapper {
   flex-direction: column;
 }
+
+/*little cards rooms in Marseille*/
 .city_rooms-mosaic-wrapper article {
   box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
   background-color: white;
@@ -365,7 +307,7 @@ footer ul {
   margin-bottom: 10px;
   background-color: white;
   border-radius: 20px;
-  border: 5px solid white;
+  border: 5px solid transparent;
 }
 .city_rooms-mosaic-wrapper article:hover {
   transform: scale(1.01);
@@ -381,6 +323,10 @@ footer ul {
 .city_rooms .more {
   padding: 20px 0 0 20px;
 }
+
+/*--------------------*/
+/*activities section*/
+/*--------------------*/
 
 #activities {
   padding: 38px 10px 20px 10px;
@@ -408,6 +354,27 @@ footer ul {
   padding: 15px 15px;
 }
 
+/*--------------------*/
+/*footer*/
+/*--------------------*/
+footer {
+  padding: 38px 25px 20px 25px;
+  background-color: #f2f2f2;
+}
+footer h3 {
+  padding-bottom: 20px;
+  font-size: 1.2em;
+}
+footer ul {
+  margin: -5px 0 35px 0;
+  padding: 0;
+  line-height: 2em;
+}
+
+/*--------------------*/
+/*responsive for mobile with medium width screen*/
+/*--------------------*/
+
 @media screen and (min-width: 530px) {
   .city_rooms-mosaic-wrapper {
     display: flex;
@@ -429,6 +396,11 @@ footer ul {
     width: 49%;
   }
 }
+
+/*--------------------*/
+/*responsive for mobile with large width screen and tablet*/
+/*--------------------*/
+
 @media screen and (min-width: 800px) {
   .trending_rooms-mosaic {
     display: flex;
@@ -437,6 +409,8 @@ footer ul {
   .trending_rooms-mosaic a {
     width: 34%;
   }
+
+  /*little cards trending rooms in Marseille img and text disposition*/
   .trending_rooms-mosaic .thumbnails_left-side_rooms {
     display: flex;
     flex-direction: column;
@@ -450,48 +424,148 @@ footer ul {
   .trending_rooms-mosaic .thumbnails_left-side_rooms .empty-line {
     display: none;
   }
-
+  /*little cards rooms in Marseille*/
   .city_rooms-mosaic-wrapper article {
     width: 30%;
   }
 }
+
+/*--------------------*/
+/*responsive for desktop */
+/*--------------------*/
+
 @media screen and (min-width: 1250px) {
+  body {
+    padding: 0 10px;
+  }
+
+  nav {
+    grid-template-columns: 1fr 150px 150px 150px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo nav nav sub";
+  }
+
+  nav #logo {
+    padding: 20px 0 0 0;
+  }
+
+  nav #sub {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  nav #sub:hover {
+    background-color: #0065fc;
+    color: white;
+    transition: 0.1s ease-in-out;
+  }
+
+  nav #sub:hover a {
+    color: white;
+  }
+
+  nav #sub a {
+    display: block;
+    height: 100%;
+    padding: 27px 0 0 37px;
+    font-size: 1.1em;
+  }
+
+  nav ul li a {
+    height: 50px;
+    padding-top: 27px;
+    border-bottom: none;
+    border-top: 3px solid #f2f2f2;
+  }
+
+  nav ul li a:hover {
+    border-bottom: none;
+    border-top: 3px solid #0065fc;
+  }
+
   #headline-wrapper,
-#search_preferences-wrapper {
+  #search_preferences-wrapper {
     padding: 45px 0 0 0;
   }
 
+  #search-bar .button-desktop-version {
+    display: block;
+    border-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 0 20px;
+    margin-left: 0;
+    font-size: 1.1em;
+    color: white;
+  }
+
+  #search-bar .button-responsive-version {
+    display: none;
+  }
+
+  #search-bar input {
+    width: 250px;
+  }
+
+  .filters {
+    display: flex;
+  }
+
+  .filters h3 {
+    padding: 15px 40px 0 0;
+  }
+
+  .filters_button {
+    margin: 0px 40px 0 0;
+  }
+
+  /*--------------------*/
+  /*principal bloc with left and right asides*/
+  /*--------------------*/
   #hotels_wrapper {
     display: flex;
     flex-direction: row-reverse;
     gap: 25px;
   }
+
   #hotels_wrapper .city_rooms,
-#hotels_wrapper .trending_rooms {
+  #hotels_wrapper .trending_rooms {
     border-radius: 20px;
     padding: 37px 35px 20px;
   }
+
+  /* left aside*/
   #hotels_wrapper .city_rooms {
     background-color: #f2f2f2;
     width: 70%;
   }
+
+  /*right aside*/
   #hotels_wrapper .trending_rooms {
     width: 30%;
   }
+
   #hotels_wrapper .trending_rooms-mosaic {
     flex-direction: column;
   }
+
   #hotels_wrapper .trending_rooms-mosaic a {
     width: 100%;
   }
+
   #hotels_wrapper .trending_rooms .thumbnails_left-side_rooms {
     flex-direction: row;
     width: 100%;
   }
+
   #hotels_wrapper .trending_rooms .thumbnails_left-side_rooms .empty-line {
     display: block;
     height: 40px;
   }
+
   #hotels_wrapper .trending_rooms .thumbnails_left-side_rooms img {
     width: 40%;
     height: 133px;
@@ -503,19 +577,30 @@ footer ul {
   #activities {
     padding-bottom: 35px;
   }
+
   #activities_mosaic {
     position: relative;
     display: grid;
-    grid-template-columns: repeat 4, 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "bloc1 bloc2 bloc4 bloc5" "bloc1 bloc2 bloc4 bloc5" "bloc1 bloc2 bloc4 bloc6" "bloc1 bloc3 bloc4 bloc6" "bloc1 bloc3 bloc4 bloc6";
     row-gap: 20px;
     column-gap: 25px;
     height: 500px;
   }
+
+  #activities_mosaic article img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 115px;
+  }
+
+  /*attribution with grid area of the 6 cards in the mosaic*/
   #activities_mosaic .bloc1 {
     grid-area: bloc1;
   }
+
+  /*height measure to deal with the 6 cards size in the mosaic*/
   #activities_mosaic .bloc1 img {
     height: 445px;
   }
@@ -553,11 +638,12 @@ footer ul {
     width: 100%;
     height: 100%;
   }
-  #activities_mosaic article img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 115px;
+
+  footer {
+    display: flex;
+  }
+
+  footer div {
+    padding-right: 200px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
