@@ -145,18 +145,21 @@ nav ul a:hover {
   margin: 1em;
   font-size: 1.1em;
 }
+
 #search-bar input {
   border: 1px solid #f2f2f2;
+  padding: 0 20px 0 15px;
   outline: none;
-  width: 350px;
+  width: 270px;
 }
+#search-bar input,
 #search-bar input::placeholder {
-  padding: 0px 0px 0px 15px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 1.1em;
   color: black;
 }
+
 #search-bar button {
   margin-left: -15px;
   background-color: #0065fc;
@@ -278,8 +281,9 @@ nav ul a:hover {
   border-bottom-left-radius: 15px;
 }
 .trending_rooms .trending_rooms-mosaic_text {
-  padding: 10px 0px 0 20px;
+  padding: 10px 5px 0 10px;
 }
+
 .trending_rooms .trending_rooms-mosaic_text .empty-line {
   height: 32px;
 }
@@ -488,7 +492,7 @@ footer ul {
 
   #headline-wrapper,
   #search_preferences-wrapper {
-    padding: 45px 0 0 0;
+    padding: 20px 0 0 0;
   }
 
   #search-bar .button-desktop-version {
@@ -520,6 +524,10 @@ footer ul {
 
   .filters_button {
     margin: 0px 40px 0 0;
+  }
+
+  .info p {
+    padding: 2px 0 20px 10px;
   }
 
   /*--------------------*/
