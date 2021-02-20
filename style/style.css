@@ -47,12 +47,6 @@ p {
   font-size: 1em;
 }
 
-.icon_container {
-  text-align: center;
-  height: 48px;
-  width: 48px;
-}
-
 .blue {
   color: #0065fc;
 }
@@ -61,6 +55,7 @@ p {
   color: #f2f2f2;
 }
 
+/*ratings stars*/
 .fa-star {
   font-size: 0.7em;
 }
@@ -83,13 +78,13 @@ nav {
 nav #logo {
   grid-area: logo;
   width: 100px;
-  padding: 15px 0px 0px 20px;
+  padding: 15px 0px 0px 10%;
 }
 nav #sub {
   grid-area: sub;
   height: 50%;
-  margin: 0 auto;
-  padding: 30px 0 0 60px;
+  justify-self: right;
+  padding: 30px 15% 0 0;
 }
 nav #sub a {
   color: #0065fc;
@@ -142,7 +137,7 @@ nav ul a:hover {
   border-bottom-left-radius: 15px;
 }
 #search-bar .search-bar-icon i {
-  margin: 1em;
+  margin: 0.8em 1em 1em 1em;
   font-size: 1.1em;
 }
 
@@ -172,7 +167,7 @@ nav ul a:hover {
 #search-bar button i {
   font-size: 1.1em;
   color: white;
-  margin: 0.8em;
+  margin: 0.8em 0.8em 0.8em 0.6em;
 }
 
 #search-bar .button-desktop-version {
@@ -196,11 +191,14 @@ nav ul a:hover {
   justify-content: start;
   margin: 0 11px 10px 0;
   height: 45px;
+  outline: none;
+  background-color: white;
   border: 2px solid lightgray;
   border-radius: 25px;
   transition: 0.1s ease-in-out;
 }
-.filters_button:hover {
+.filters_button:hover,
+.filters_button:focus {
   transform: scale(1.02);
   background-color: #deebff;
   border: 2px solid transparent;
@@ -208,12 +206,20 @@ nav ul a:hover {
 .filters_button span {
   margin: 0px 15px;
   font-weight: 700;
+  font-size: 1.1em;
 }
 .filters_icon {
-  margin: -1px 0 0 -5px;
+  margin: 0 0 0 -5px;
   background-color: #deebff;
   border-radius: 50%;
 }
+
+.icon_container {
+  text-align: center;
+  height: 48px;
+  width: 48px;
+}
+
 .filters_icon i {
   color: #0065fc;
   font-size: 1.2em;
@@ -270,6 +276,13 @@ nav ul a:hover {
   border: 5px solid transparent;
   box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.18);
   transition: 0.1s ease-in-out;
+  /*to fix star ratings at bottom of the card*/
+  position: relative;
+}
+
+.star_line {
+  position: absolute;
+  bottom: 5px;
 }
 .trending_rooms article:hover {
   transform: scale(1.01);
@@ -281,11 +294,10 @@ nav ul a:hover {
   border-bottom-left-radius: 15px;
 }
 .trending_rooms .trending_rooms-mosaic_text {
-  padding: 10px 5px 0 10px;
+  margin: 10px 0px 0px 10px;
 }
-
-.trending_rooms .trending_rooms-mosaic_text .empty-line {
-  height: 32px;
+.large-empty-line {
+  height: 20px;
 }
 
 /*--------------------*/
@@ -312,6 +324,8 @@ nav ul a:hover {
   background-color: white;
   border-radius: 20px;
   border: 5px solid transparent;
+  /*to fix star ratings at bottom of the card*/
+  position: relative;
 }
 .city_rooms-mosaic-wrapper article:hover {
   transform: scale(1.01);
@@ -325,7 +339,11 @@ nav ul a:hover {
   padding: 5px 0px 8px 15px;
 }
 .city_rooms .more {
-  padding: 20px 0 0 20px;
+  padding: 25px 0 0 0px;
+}
+
+.empty-line {
+  height: 10px;
 }
 
 /*--------------------*/
@@ -405,13 +423,15 @@ footer ul {
 /*responsive for mobile with large width screen and tablet*/
 /*--------------------*/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px) {
   .trending_rooms-mosaic {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .trending_rooms-mosaic a {
-    width: 34%;
+    width: 45%;
   }
 
   /*little cards trending rooms in Marseille img and text disposition*/
@@ -425,24 +445,23 @@ footer ul {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 0px;
   }
-  .trending_rooms-mosaic .thumbnails_left-side_rooms .empty-line {
-    display: none;
-  }
+
   /*little cards rooms in Marseille*/
   .city_rooms-mosaic-wrapper article {
-    width: 30%;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 800px) {
+  footer {
+    display: flex;
+  }
+
+  footer div {
+    padding-right: 80px;
   }
 }
 
-/*--------------------*/
-/*responsive for desktop */
-/*--------------------*/
-
-@media screen and (min-width: 1250px) {
-  body {
-    padding: 0 10px;
-  }
-
+@media screen and (min-width: 980px) {
   nav {
     grid-template-columns: 1fr 150px 150px 150px;
     grid-template-rows: 1fr;
@@ -450,7 +469,7 @@ footer ul {
   }
 
   nav #logo {
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 10px;
   }
 
   nav #sub {
@@ -490,6 +509,37 @@ footer ul {
     border-top: 3px solid #0065fc;
   }
 
+  .filters_button {
+    margin: 0px 40px 0 0;
+  }
+
+  .trending_rooms-mosaic {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .trending_rooms-mosaic a {
+    width: 35%;
+  }
+
+  footer div {
+    padding-right: 120px;
+  }
+}
+
+/*--------------------*/
+/*responsive for desktop */
+/*--------------------*/
+
+@media screen and (min-width: 1250px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .detail {
+    font-size: 0.9em;
+    line-height: 2em;
+  }
+
   #headline-wrapper,
   #search_preferences-wrapper {
     padding: 20px 0 0 0;
@@ -520,10 +570,6 @@ footer ul {
 
   .filters h3 {
     padding: 15px 40px 0 0;
-  }
-
-  .filters_button {
-    margin: 0px 40px 0 0;
   }
 
   .info p {
@@ -645,10 +691,6 @@ footer ul {
   #activities_mosaic article {
     width: 100%;
     height: 100%;
-  }
-
-  footer {
-    display: flex;
   }
 
   footer div {
