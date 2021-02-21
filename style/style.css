@@ -100,7 +100,6 @@ nav ul {
 }
 nav ul li {
   width: 50%;
-  height: 50%;
   text-align: center;
 }
 nav ul a {
@@ -505,7 +504,7 @@ footer ul {
   }
 
   nav ul li a {
-    height: 50px;
+    height: 100%;
     margin: 0;
     padding-top: 27px;
     border-bottom: none;
