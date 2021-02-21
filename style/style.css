@@ -198,8 +198,11 @@ nav ul a:hover {
   border-radius: 25px;
   transition: 0.1s ease-in-out;
 }
-.filters_button:hover,
-.filters_button:focus {
+
+.filters_button input {
+  display: none;
+}
+.filters_button:hover {
   transform: scale(1.02);
   background-color: #deebff;
   border: 2px solid transparent;

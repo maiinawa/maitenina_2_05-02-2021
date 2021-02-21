@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
 
         <script  src="https://kit.fontawesome.com/79d9690799.js" crossorigin="anonymous"></script>
 
@@ -49,7 +49,7 @@
                     <p>En plein centre ville ou en pleine nature</p>
             </section>
 
-            <div id="search_preferences-wrapper">
+            <form id="search_preferences-wrapper">
                 <div id="search-bar">
                     <div class="search-bar-icon icon_container">
                         <i class="fas fa-map-marker-alt"></i>
@@ -66,26 +66,29 @@
                     <div class="filters_wrapper">
 
 
-                        <div class="filters_button">
+                        <label for="economic__filter" class="filters_button">
+                            <input type="checkbox"  id="economic__filter" name="filtres">
                             <div class="icon_container filters_icon"><i class="fas fa-money-bill-wave"></i></div>
                             <span>Économique</span>
-                        </div>
+                        </label>
 
-                        <div class="filters_button">
-                            <div class="icon_container filters_icon"><i class="fas fa-child"></i></div>
+                        <label for="familial__filter" class="filters_button">
+                            <input type="checkbox"  id="familial__filter" name="filtres">
+                            <div class="icon_container filters_icon"><i class="fas fa-money-bill-wave"></i></div>
                             <span>Familial</span>
-                        </div>
+                        </label>
 
-                        <div class="filters_button">
-                            <div class="icon_container filters_icon"><i class="fas fa-heart"></i></div>
+                        <label for="romantique__filter" class="filters_button">
+                            <input type="checkbox"  id="romantique__filter" name="filtres">
+                            <div class="icon_container filters_icon"><i class="fas fa-money-bill-wave"></i></div>
                             <span>Romantique</span>
-                        </div>
+                        </label>
 
-                        <div class="filters_button">
-                            <div class="icon_container filters_icon"><i class="fas fa-dog"></i></div>
+                        <label for="animals__filter" class="filters_button">
+                            <input type="checkbox"  id="animals__filter" name="filtres">
+                            <div class="icon_container filters_icon"><i class="fas fa-money-bill-wave"></i></div>
                             <span>Animaux autorisés</span>
-                        </div>
-
+                        </label>
 
                     </div>
                 </div>
@@ -96,7 +99,7 @@
                         </div>
                         <p>Plus de 500 logements sont disponibles dans cette ville</p>
                     </div>
-            </div>
+                </form>
 
             <div id="hotels_wrapper">
 
