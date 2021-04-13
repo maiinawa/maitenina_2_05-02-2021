@@ -613,6 +613,7 @@ footer ul {
   #hotels_wrapper {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: 25px;
   }
 
@@ -625,12 +626,12 @@ footer ul {
   /* left aside*/
   #hotels_wrapper .city_rooms {
     background-color: #f2f2f2;
-    width: 70%;
+    width: 69%;
   }
 
   /*right aside*/
   #hotels_wrapper .trending_rooms {
-    width: 30%;
+    width: 29%;
   }
 
   #hotels_wrapper .trending_rooms-mosaic {
