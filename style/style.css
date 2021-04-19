@@ -70,7 +70,7 @@ p {
 }
 
 /*--------------------*/
-/*navbar*/
+/*navbar mobile version*/
 /*--------------------*/
 nav {
   display: grid;
@@ -366,7 +366,7 @@ nav ul a:hover {
 }
 
 .empty-line {
-  height: 10px;
+  height: 12px;
 }
 
 /*--------------------*/
